@@ -7,7 +7,9 @@
   align-items: center;
 
   h1 {
+    margin-top: 10px;
     font-size: 50px;
+    overflow-y: hidden;
   }
   ul {
     margin: 10px;
@@ -19,6 +21,7 @@
     width: 70%;
     @include flx-center;
     flex-wrap: wrap;
+    overflow-y: hidden;
   }
   .item {
     border-radius: 10px;
