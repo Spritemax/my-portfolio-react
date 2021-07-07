@@ -5,3 +5,11 @@ $primaryColor: rgb(8, 8, 58);
     align-items: center;
     justify-content: center;
 }
+
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}

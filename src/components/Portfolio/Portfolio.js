@@ -8,7 +8,7 @@ import {
   featuredPortfolio,
   mobilePortfolio,
   webPortfolio,
-} from "../../data";
+} from "./data";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
 
 const Portfolio = () => {

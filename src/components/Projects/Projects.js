@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { data } from "./data";
+import { sliderData } from "./data";
 import "./Projects.scss";
 
 const Projects = () => {
@@ -8,7 +8,7 @@ const Projects = () => {
   const handleClickArrow = (where) => {
     where === "left"
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 0)
-      : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : data.length -1);
+      : setCurrentSlide(currentSlide < sliderData.length - 1 ? currentSlide + 1 : sliderData.length -1);
   };
 
   return (
@@ -17,7 +17,7 @@ const Projects = () => {
         className="slider"
         style={{ transform: `translateX(-${currentSlide * 100}vw)`}}
       >
-        {data.map((i) => (
+        {sliderData.map((i) => (
           <div className="container" key={i.id}>
             <div className="slide">
               <div className="left">
