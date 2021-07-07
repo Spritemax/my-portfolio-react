@@ -1,0 +1,7 @@
+$primaryColor: rgb(8, 8, 58);
+
+@mixin flx-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

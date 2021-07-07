@@ -1,0 +1,54 @@
+@import "../../theme/styles/global";
+
+.portfolio {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 50px;
+  }
+  ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .container {
+    width: 70%;
+    @include flx-center;
+    flex-wrap: wrap;
+  }
+  .item {
+    border-radius: 10px;
+    border: 1px solid $primaryColor;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primaryColor;
+
+      img {
+        opacity: 0.3;
+        z-index: 0;
+      }
+    }
+
+    h3 {
+      position: absolute;
+      font-size: 20px;
+    }
+
+    img {
+      width: 300px;
+      z-index: 1;
+    }
+  }
+}
