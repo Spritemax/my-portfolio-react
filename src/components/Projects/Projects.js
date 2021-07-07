@@ -15,7 +15,7 @@ const Projects = () => {
     <div className="projects" id="projects">
       <div
         className="slider"
-        style={{ transform: `translateX(-${currentSlide * 100}vw)`, transition: "0.8s ease" }}
+        style={{ transform: `translateX(-${currentSlide * 100}vw)`}}
       >
         {data.map((i) => (
           <div className="container" key={i.id}>
