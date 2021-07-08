@@ -1,4 +1,4 @@
-export const list = [
+export const categories = [
     {
       id: "featured",
       title: "Featured",

@@ -12,6 +12,10 @@
     flex: 1;
     overflow: hidden;
 
+    @include mobile {
+      text-align: center;
+    }
+
     img {
       height: 100%;
     }

@@ -6,7 +6,6 @@
   position: relative;
 
   .arrow {
-    height: 70px;
     position: absolute;
     cursor: pointer;
 
@@ -17,9 +16,18 @@
     &.left {
       left: 100px;
       transform: rotateY(180deg);
+
+      @include laptops {
+        left: 15px;
+        transform: rotateY(180deg);
+      }
     }
     &.right {
       right: 100px;
+
+      @include laptops {
+        right: 15px;
+      }
     }
   }
 }
@@ -99,7 +107,7 @@
           }
           p {
             font-size: 13px;
-            
+
             @include mobile {
               display: none;
             }

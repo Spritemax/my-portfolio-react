@@ -13,3 +13,11 @@ $width: 768px;
         @content
     }
 }
+
+$width2: 992px;
+
+@mixin laptops {
+    @media (max-width: #{$width2}){
+        @content
+    }
+}

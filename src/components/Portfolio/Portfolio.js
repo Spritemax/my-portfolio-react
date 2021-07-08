@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Portfolio.scss";
-import { list } from "./list";
+import { categories } from "./list";
 import PortfolioCategoryItem from "../PortfolioCategoryItem/PortfolioCategoryItem";
 import {
   contentPortfolio,
@@ -15,7 +15,7 @@ const Portfolio = () => {
   const [selected, setSelected] = useState("Featured");
   const [portfolio, setPortfolio] = useState([]);
 
-  const portfolioCategoryList = list.map((i) => (
+  const portfolioCategoryList = categories.map((i) => (
     <PortfolioCategoryItem
       key={i.id}
       title={i.title}

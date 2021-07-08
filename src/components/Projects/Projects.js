@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Icons from "../Icons/Icons";
 import { sliderData } from "./data";
 import "./Projects.scss";
 
@@ -8,14 +9,14 @@ const Projects = () => {
   const handleClickArrow = (where) => {
     where === "left"
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 0)
-      : setCurrentSlide(currentSlide < sliderData.length - 1 ? currentSlide + 1 : sliderData.length -1);
+      : setCurrentSlide(currentSlide < sliderData.length - 1 ? currentSlide + 1 : sliderData.length - 1);
   };
 
   return (
     <div className="projects" id="projects">
       <div
         className="slider"
-        style={{ transform: `translateX(-${currentSlide * 100}vw)`}}
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         {sliderData.map((i) => (
           <div className="container" key={i.id}>
@@ -37,18 +38,8 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <img
-        src="assets/arrow.png"
-        className="arrow left"
-        alt="arrow"
-        onClick={() => handleClickArrow("left")}
-      />
-      <img
-        src="assets/arrow.png"
-        className="arrow right"
-        alt="arrow"
-        onClick={() => handleClickArrow()}
-      />
+      <Icons type="arrow" className="arrow left" onClick={() => handleClickArrow("left")} />
+      <Icons type="arrow" className="arrow right" onClick={() => handleClickArrow()}/>
     </div>
   );
 };
