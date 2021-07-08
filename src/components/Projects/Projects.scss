@@ -10,6 +10,10 @@
     position: absolute;
     cursor: pointer;
 
+    @include mobile{
+      display: none;
+    }
+
     &.left {
       left: 100px;
       transform: rotateY(180deg);
@@ -27,6 +31,13 @@
   left: 0;
   transition: all 0.8s ease-out;
 
+  @include mobile{
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
   .container {
     width: 100vw;
     @include flx-center;
@@ -37,6 +48,12 @@
       background-color: #fff;
       border-radius: 20px;
       @include flx-center;
+
+      @include mobile{
+        width: 90%;
+        height: 150px;
+        margin: 10px;
+      }
 
       .left {
         flex: 4;
