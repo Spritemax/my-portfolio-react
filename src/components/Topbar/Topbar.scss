@@ -9,7 +9,7 @@
   top: 0;
   z-index: 5;
   transition: all 0.7s ease;
-  
+
   svg {
     transition: 0.7s ease;
   }
@@ -49,27 +49,37 @@
     }
   }
 }
-  .wrapper {
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-size: 40px;
-    font-weight: 700;
-    text-decoration: none;
-    color: inherit;
-    margin-right: 40px;
-  }
+
+.wrapper {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   .left {
     display: flex;
     align-items: center;
+
+    .logo {
+      font-size: 40px;
+      font-weight: 700;
+      text-decoration: none;
+      color: inherit;
+      margin-right: 40px;
+
+      @include mobile {
+        font-size: 25px;
+      }
+    }
 
     .itemContainer {
       display: flex;
       align-items: center;
       margin-left: 30px;
+
+      @include mobile {
+        display: none;
+      }
 
       span {
         font-size: 15px;
@@ -96,3 +106,4 @@
       }
     }
   }
+}

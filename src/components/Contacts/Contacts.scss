@@ -1,3 +1,70 @@
+@import "../../theme/styles/global";
+
 .contacts {
-    background-color: lightblue;
+  background-color: lightblue;
+  display: flex;
+
+  .left {
+    flex: 1;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    form {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    input {
+        width: 400px;
+        height: 30px;
+        font-size: 18px;
+
+    }
+    textarea {
+        width: 400px;
+        height: 200px;
+        font-size: 18px;
+
+    }
+    button {
+        width: 200px;
+        height: 50px;
+        color: #fff;
+        background-color: crimson;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 20px;
+
+    }
+  }
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: crimson;
+    text-align: center;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: crimson;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color:crimson;
+  }

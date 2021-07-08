@@ -8,7 +8,7 @@ const Testimonials = () => {
       <h1>Testimonials</h1>
       <div className="container">
         {testimonials.map((i) => (
-          <div className="card">
+          <div key={i.id} className={i.featured ? "card featured" : "card"}>
             <div className="top">
               <img src="assets/right-arrow.png" className="left" alt="arrow"/>
               <img src={i.img} className="user" alt="pic" />

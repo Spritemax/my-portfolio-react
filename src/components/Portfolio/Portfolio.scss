@@ -10,18 +10,31 @@
     margin-top: 10px;
     font-size: 50px;
     overflow-y: hidden;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
   ul {
     margin: 10px;
     padding: 0;
     list-style: none;
     display: flex;
+
+    @include mobile {
+      font-size: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
   }
   .container {
     width: 70%;
     @include flx-center;
     flex-wrap: wrap;
     overflow-y: hidden;
+
+
   }
   .item {
     border-radius: 10px;

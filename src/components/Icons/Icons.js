@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
+
 import React from 'react';
-import * as icons from '../../theme/icons';
+import * as icons from './icons/index';
 
 const Icons = ({ type, color, filled, width, height, onClick, className }) => {
 
