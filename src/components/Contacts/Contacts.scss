@@ -4,6 +4,10 @@
   background-color: lightblue;
   display: flex;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   .left {
     flex: 1;
     overflow: hidden;
@@ -20,33 +24,46 @@
     justify-content: center;
 
     h2 {
-        font-size: 30px;
+      font-size: 30px;
     }
 
     form {
-        width: 70%;
-        height: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
 
-    }
-    input {
+      @include mobile {
+        & > * {
+          margin-top: 10px;
+        }
+      }
+
+      input {
         width: 400px;
         height: 30px;
         font-size: 18px;
         border-radius: 6px;
 
-    }
-    textarea {
+        @include mobile {
+          width: 250px;
+          height: 50px;
+        }
+      }
+      textarea {
         width: 400px;
         height: 200px;
         font-size: 18px;
         border-radius: 12px;
 
-    }
-    button {
+        @include mobile {
+          width: 250px;
+          height: 100px;
+        }
+      }
+      button {
         width: 200px;
         height: 50px;
         color: #fff;
@@ -56,17 +73,20 @@
         border-radius: 10px;
         font-weight: 500;
         font-size: 20px;
-
+      }
     }
   }
-}
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: crimson;
     text-align: center;
   }
-  ::-moz-placeholder { /* Firefox 19+ */
+  ::-moz-placeholder {
+    /* Firefox 19+ */
     color: crimson;
   }
-  :-ms-input-placeholder { /* IE 10+ */
-    color:crimson;
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: crimson;
   }
+}

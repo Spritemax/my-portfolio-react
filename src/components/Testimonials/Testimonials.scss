@@ -15,7 +15,7 @@
       font-size: 50px;
 
       @include mobile{
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 
@@ -28,6 +28,7 @@
 
       @include mobile{
         flex-direction: column;
+        height: 100%;
 
       }
 
@@ -43,8 +44,8 @@
         transition: all 0.5s ease;
 
         @include mobile{
-          height: 180px;
-          margin: 10px 0;
+          height: 200px;
+          margin: 5px 0;
         }
 
         &.featured{
