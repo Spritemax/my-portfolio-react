@@ -19,9 +19,13 @@ const Contacts = () => {
       </div>
       <div className="right">
         <h2>Contacts</h2>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Your Message..." ref={textRef} ></textarea>
+        <form action="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <input type="text" placeholder="Email" name="email" />
+          <textarea placeholder="Your Message..." ref={textRef} name="message" ></textarea>
+          <input type="file" name="file" placeholder="Upload file" />
+          <div className="not-robot">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
           <button type="submit">Send</button>
           {message && <span>Thanks for contacting me. Will reply asap =)</span> }
         </form>

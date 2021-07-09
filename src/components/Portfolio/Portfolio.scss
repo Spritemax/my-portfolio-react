@@ -7,9 +7,9 @@
   align-items: center;
 
   h2 {
-    margin-top: 10px;
+    // margin-top: 10px;
     font-size: 50px;
-    overflow-y: hidden;
+    // overflow-y: hidden;
 
     @include mobile {
       font-size: 20px;
@@ -29,7 +29,7 @@
     }
   }
   .container {
-    width: 70%;
+    width: 90%;
     @include flx-center;
     flex-wrap: wrap;
     overflow-y: hidden;
@@ -54,7 +54,7 @@
 
     @include mobile{
      margin: 10px;
-     width: 130px;
+     width: 140px;
      height: 100px;
     }
 
