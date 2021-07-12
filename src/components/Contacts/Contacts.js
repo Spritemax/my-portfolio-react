@@ -27,7 +27,6 @@ const Contacts = () => {
             <div data-netlify-recaptcha="true"></div>
           </div>
           <button type="submit">Send</button>
-          {message && <span>Thanks for contacting me. Will reply asap =)</span> }
         </form>
       </div>
     </div>
